@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sandbox.DataAccessLayer.Contexts;
 
@@ -10,9 +11,11 @@ using Sandbox.DataAccessLayer.Contexts;
 namespace Sandbox.DataAccessLayer.Migrations
 {
     [DbContext(typeof(SandboxContext))]
-    partial class SandboxContextModelSnapshot : ModelSnapshot
+    [Migration("20231003153913_RenameSpearmanTable")]
+    partial class RenameSpearmanTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.11");

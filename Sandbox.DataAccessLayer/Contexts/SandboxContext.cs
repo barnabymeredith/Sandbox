@@ -10,7 +10,7 @@ namespace Sandbox.DataAccessLayer.Contexts
 {
     public class SandboxContext : DbContext
     {
-        public DbSet<SpearmanDbo> SpearmanDbos { get; set; }
+        public DbSet<SpearmanDbo> Spearman { get; set; }
         public DbSet<SpearDbo> Spears {  get; set; }
 
         public string DbPath { get; }
